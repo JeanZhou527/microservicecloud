@@ -1,0 +1,18 @@
+server:
+  port: 80
+
+ 
+feign:
+  hystrix:
+    enabled: true #客户端开启对服务降级的支持
+ 
+  
+  
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      #defaultZone: http://localhost:7001/eureka#单机版
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/#多台服务器需要写多台服务器的ip地址
+    register-with-eureka: false
+
+    
